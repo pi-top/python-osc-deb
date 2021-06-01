@@ -1,0 +1,21 @@
+name: Check for New Upstream Version
+
+on:
+  schedule:
+    # Run daily at midnight
+    - cron:  '0 0 * * *'
+
+jobs:
+  check-new-upstream-version:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.2.0
+        with:
+          fetch-depth: 0
+
+      - name: Check if upstream version is newer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends devscripts
+          uscan --verbose
