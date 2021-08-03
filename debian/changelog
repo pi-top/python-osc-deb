@@ -1,3 +1,11 @@
+python-osc (1.7.6-2) unstable; urgency=medium
+
+  * New workflows (#1)
+  * Update master workflow files
+  * Update master workflow files
+
+ -- pi-top <deb-maintainers@pi-top.com>  Tue, 03 Aug 2021 15:58:51 +0000
+
 python-osc (1.7.6-1) unstable; urgency=medium
 
   * Debianize 1.7.6
